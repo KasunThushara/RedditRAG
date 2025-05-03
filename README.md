@@ -1,9 +1,4 @@
-# RedditRAG
 
-
----
-
-````markdown
 # RedditRAG with Gemini API 🔍🤖
 
 This is a **Retrieval-Augmented Generation (RAG)** tool that fetches Reddit posts using the Reddit API and allows you to ask questions about them using the **Google Gemini API**.
@@ -28,14 +23,10 @@ This is a **Retrieval-Augmented Generation (RAG)** tool that fetches Reddit post
 3. Choose `Download ZIP`
 4. Extract it to any folder (e.g., `D:\Projects\RedditRAG`)
 
----
-
 ### 🧠 2. Open in PyCharm
 
 1. Open **PyCharm**
 2. Choose **Open** and select the extracted folder
-
----
 
 ### 🐍 3. Set Up Virtual Environment (Optional but Recommended)
 
@@ -43,21 +34,18 @@ This is a **Retrieval-Augmented Generation (RAG)** tool that fetches Reddit post
 2. Click ⚙ > `Add...` > Choose `Virtualenv Environment`
 3. Select your Python interpreter (e.g., Python 3.11) and click OK
 
----
-
 ### 📦 4. Install Dependencies
 
 Use PyCharm Terminal:
 
 ```bash
 pip install -r requirements.txt
+pip install protobuf==3.20.*
 ````
-
----
 
 ### ▶ 5. Run the App
 
-```
+```bash
 streamlit run app.py
 ```
 
@@ -78,24 +66,5 @@ You can enter these values directly in the UI.
 
 ## 📂 Folder Input
 
-Provide the path to a folder that contains `.txt` files with Reddit post links—each file can contain one or multiple Reddit URLs.
-
----
-
-## ✨ Screenshot
-
-![App UI](./assets/screenshot.png)
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-## 🙋‍♂️ Author
-
-Created by [Kasun Thushara](https://github.com/KasunThushara)
-
+Provide the path to a folder that contains `.txt` files with Reddit post links — each file can contain one or multiple Reddit URLs.
 
