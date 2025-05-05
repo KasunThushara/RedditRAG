@@ -1,15 +1,18 @@
-
 # RedditRAG with Gemini API 🔍🤖
 
-This is a **Retrieval-Augmented Generation (RAG)** tool that fetches Reddit posts using the Reddit API and allows you to ask questions about them using the **Google Gemini API**.
+This is a **Retrieval-Augmented Generation (RAG)** tool that fetches Reddit posts using the Reddit API and allows you to ask questions about them using the **Google Gemini API**. The tool now features a two-step workflow for better performance: first create your vector database, then query it as needed.
 
 ---
 
 ## 📁 Features
 
+- **Two-step workflow**: 
+  - 1️⃣ Create vector database from Reddit posts
+  - 2️⃣ Query the pre-built database multiple times
 - Fetch Reddit post contents from `.txt` link lists
-- Create vector database for semantic search
+- Persistent vector storage for efficient querying
 - Ask contextual questions from the content using Gemini
+- View sample posts and sources used for answers
 - Built with **Streamlit** for a simple interactive UI
 
 ---
@@ -41,7 +44,7 @@ Use PyCharm Terminal:
 ```bash
 pip install -r requirements.txt
 pip install protobuf==3.20.*
-````
+```
 
 ### ▶ 5. Run the App
 
@@ -64,7 +67,24 @@ You can enter these values directly in the UI.
 
 ---
 
-## 📂 Folder Input
+## 📂 Folder Input & Workflow
 
-Provide the path to a folder that contains `.txt` files with Reddit post links — each file can contain one or multiple Reddit URLs.
+1. **Prepare your data**:
+   - Create a folder containing `.txt` files
+   - Each file should contain one or multiple Reddit URLs (one per line)
+   - Example structure:
+     ```
+     /my_reddit_posts
+       ├── technology.txt
+       ├── science.txt
+       └── programming.txt
+     ```
+
+2. **In the app**:
+   - Enter the path to your folder (e.g., "my_reddit_posts")
+   - Click **"Create Vector Database"** to process all posts
+   - Once complete, you'll see a confirmation and sample posts
+   - Enter your question and click **"Get Answer"** to query the database
+
+---
 
